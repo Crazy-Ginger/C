@@ -24,13 +24,13 @@ void quest2()
 
 void quest3()
 {
-    unsigned int x = 256;
-    unsigned int y = 6000;
-    unsigned long z = 100;
+    int x = 256;
+    const unsigned int y = 6000;
+    long z = 100;
     x = x * y;
     z = z * x;
     z = z * y;
-    printf("%lu\n", z);
+    printf("%ld\n", z);
     //ended up changing the printing method not sure if this was proper way
 }
 
