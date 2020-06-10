@@ -8,7 +8,8 @@ struct coords
 struct date 
 {
     unsigned short year;
-    unsigned short MonthDate;
+    unsigned char month;
+    unsigned char date;
 };
 
 struct  person
@@ -16,8 +17,8 @@ struct  person
     char name[50];
     struct date birthday;
 };
-
-struct __attribute__((__packed__)) packed
+/*__attribute__((__packed__))*/
+struct  packed
 {
     char bit1:1;
     char bit2:1;
@@ -30,7 +31,11 @@ struct __attribute__((__packed__)) packed
 
 int main()
 {
-    struct packed derreck;
+    struct coords coord;
+    struct person derreck;
+    struct packed small;
+    printf("%lu\n", sizeof(coord));
     printf("%lu\n", sizeof(derreck));
+    printf("%lu\n", sizeof(small));
     return 0;
 }
